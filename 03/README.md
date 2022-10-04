@@ -17,3 +17,11 @@
 imageIDのみ出力
 % docker image ls --no-trunc -q
 ```
+
+#### リソースの使用状況の確認
+```
+% docker container stats
+
+-a: すべてのコンテナ
+--no-stream: 一度だけ表示する
+```
