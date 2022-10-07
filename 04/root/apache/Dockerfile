@@ -6,10 +6,10 @@
 FROM centos:7.5.1804
 
 # プロキシサーバーの設定
-ENV hhtp_proxy hhtp://proxy.your.site.com:8080
+ENV hhtp_proxy http://proxy.your.site.com:8080
 
 # プロキシサーバーの設定
-ENV hhtps_proxy hhtp://proxy.your.site.com:8080
+ENV hhtps_proxy http://proxy.your.site.com:8080
 
 # httpとiproute RPMパッケージをDockerイメージにインストール
 RUN yum install -y httpd iproute && yum clean all
