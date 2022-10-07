@@ -20,4 +20,5 @@
   % docker container exec -it web0001 /bin/bash
   ```
   
-####
+#### 【bash入門】bashシェルスクリプトの書き方
+- https://tech-blog.rakus.co.jp/entry/20210525/shellscript
