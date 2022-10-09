@@ -1,6 +1,6 @@
 FROM centos:7.5.1804
-ENV hhtp_proxy http://proxy.your.site.com:8080
-ENV hhtps_proxy http://proxy.your.site.com:8080
+ENV http_proxy http://proxy.your.site.com:8080
+ENV https_proxy http://proxy.your.site.com:8080
 # -y, --assumeyes Automatically answer yes for all questions.
 RUN yum install -y gcc-gfortran libgfortran-static
 COPY pi.f /tmp
