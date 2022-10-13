@@ -1,0 +1,24 @@
+version: '3'
+services:
+  web:
+    image: alpine:ac01
+    ports:
+      - "8081:8081"
+    deploy:
+      placement:
+        # Dockerイメージalpine:ac01から生成されるコンテナは、マネージャノード以外に配備
+        constraints: [node.role != manager]
+    networks:
+      # Dockerイメージalpine:ac01から生成されるコンテナは、オーバレイネットワークmynet11に配属
+      - mynet11
+
+  redis:
+    image: redis:alpine
+    deploy:
+      placement:
+        constraints: [node.role != manager]
+    networks:
+      - mynet11
+networks:
+  mynet11:
+    external: true
