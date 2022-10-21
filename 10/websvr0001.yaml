@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: httpd-pod0001
+spec:
+  containers:
+  - name: httpd-container
+  image: httpd:latest
+  ports:
+  - containerPort: 80
+
+# kubectl create -f websvr0001.yaml
+# kubectl get pod
+# kubectl describe pods httpd-pod0001
