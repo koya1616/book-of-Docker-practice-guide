@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: centos-deploy
+spec:
+  selector:
+    matchLabels:
+      app: centos-deploy
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: centos-deploy
+    spec:
+      containers:
+      - name: centos-deploy
+        image: centos:6.10
+        args:
+          - /bin/bash
+          - -c
+          - tail -f /dev/null
+
+# kubectl create -f ./centos-deploy.yaml --record
+# kubectl get pods
